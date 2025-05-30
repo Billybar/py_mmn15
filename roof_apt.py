@@ -1,6 +1,7 @@
 from special_apt import SpecialApt
 ROOF_PRICE = 40000
 POOL_PRICE = 30000
+
 # 1)
 class RoofApt(SpecialApt):
 
@@ -27,5 +28,5 @@ class RoofApt(SpecialApt):
     def get_price(self):
         if self._has_pool:
             return super().get_price() + ROOF_PRICE + POOL_PRICE
-        else:
-            return super().get_price() + ROOF_PRICE
+
+        return super().get_price() + ROOF_PRICE

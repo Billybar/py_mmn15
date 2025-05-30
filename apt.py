@@ -1,3 +1,6 @@
+PRICE_PER_SQR_METER = 20000
+ADDITIONAL_PRICE_PER_FLOOR = 5000
+
 # 1)
 class Apt:
     # 2)
@@ -22,7 +25,7 @@ class Apt:
     def __str__(self):
         return f"floor: {self._floor}, area: {self._area}"
 
-    # B)
+    # B )
     def get_price(self):
-        return self._area * 20000 + self._floor * 5000
+        return self._area * PRICE_PER_SQR_METER + self._floor * ADDITIONAL_PRICE_PER_FLOOR
 

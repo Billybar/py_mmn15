@@ -1,8 +1,10 @@
 from apt import Apt
+ADDITIONAL_VIEW_FEE_PER_FLOOR = 600
+
 # 1)
 class SpecialApt(Apt):
     # 2)
-    def __init__(self, area, floor = 0  ,has_view = False):
+    def __init__(self, area, floor = 0 ,has_view = False):
         super().__init__(area, floor)
         self._has_view = has_view
 
@@ -24,5 +26,5 @@ class SpecialApt(Apt):
     def get_price(self):
         view_price = 0
         if self._has_view:
-            view_price = self._floor * 600
+            view_price = self._floor * ADDITIONAL_VIEW_FEE_PER_FLOOR
         return super().get_price() + view_price
