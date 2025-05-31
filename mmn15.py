@@ -72,7 +72,7 @@ def top_price(apts: list):
 
 
 
-# section H
+# section G
 def only_valid_apts(apts):
     valid_apts = []
 
