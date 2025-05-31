@@ -4,9 +4,9 @@ ADDITIONAL_PRICE_PER_FLOOR = 5000
 # 1)
 class Apt:
     # 2)
-    def __init__(self, area , floor):
-        self._area = area
+    def __init__(self,floor, area):
         self._floor = floor
+        self._area = area
 
     # Getters
     # 3)
@@ -27,5 +27,11 @@ class Apt:
 
     # B )
     def get_price(self):
-        return self._area * PRICE_PER_SQR_METER + self._floor * ADDITIONAL_PRICE_PER_FLOOR
+        area_price = self._area * PRICE_PER_SQR_METER
+        floor_price = self._floor * ADDITIONAL_PRICE_PER_FLOOR
+
+        if self._floor == 1:
+            floor_price = 0
+
+        return area_price + floor_price
 

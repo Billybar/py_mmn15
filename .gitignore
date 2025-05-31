@@ -1,3 +1,8 @@
+#tests
+test_mmn15.py
+cl_test_mmn15.py
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

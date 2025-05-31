@@ -4,8 +4,8 @@ ADDITIONAL_VIEW_FEE_PER_FLOOR = 600
 # 1)
 class SpecialApt(Apt):
     # 2)
-    def __init__(self, area, floor = 0 ,has_view = False):
-        super().__init__(area, floor)
+    def __init__(self, floor, area ,has_view):
+        super().__init__(floor, area)
         self._has_view = has_view
 
     # 3)

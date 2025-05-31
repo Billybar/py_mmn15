@@ -1,10 +1,12 @@
 from special_apt import SpecialApt
+GROUND_FLOOR = 0
+
 # 1)
 class GardenApt(SpecialApt):
 
     # 2)
     def __init__(self,area, garden_area):
-        super().__init__(area)
+        super().__init__(GROUND_FLOOR, area, has_view = False)
         self._garden_area = garden_area
 
     # 3)

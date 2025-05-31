@@ -6,8 +6,8 @@ POOL_PRICE = 30000
 class RoofApt(SpecialApt):
 
     # 2)
-    def __init__(self, area, floor, has_pool):
-        super().__init__(area, floor, has_view = True)
+    def __init__(self, floor,  area, has_pool):
+        super().__init__(floor,area, has_view = True)
         self._has_pool = has_pool
 
     # 3)
