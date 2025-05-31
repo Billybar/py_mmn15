@@ -18,7 +18,11 @@ class RoofApt(SpecialApt):
     def __eq__(self, other):
         if not isinstance(other, RoofApt):
             return NotImplemented
-        return super().__eq__(other) and self._has_pool == other._has_pool
+
+        return (self._floor == other._floor and
+                self._area == other._area and
+                self._has_view == other._has_view and
+                self._has_pool == other._has_pool)
 
     # 5)
     def __str__(self):

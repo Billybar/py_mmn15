@@ -16,7 +16,17 @@ class SpecialApt(Apt):
     def __eq__(self, other):
         if not isinstance(other, SpecialApt):
             return NotImplemented
-        return super().__eq__(other) and self._has_view == other._has_view
+
+        if type(other) is Apt:
+            return self._floor == other._floor and self._area == other._area and not self._has_view
+
+        if type(other) is SpecialApt:
+            return (self._floor == other._floor and
+                    self._area == other._area and
+                    self._has_view == other._has_view)
+
+        # it's a subclass, let subclass handle the comparison
+        return NotImplemented
 
     # 5)
     def __str__(self):

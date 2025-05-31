@@ -78,7 +78,7 @@ def only_valid_apts(apts):
 
     for apt in apts:
         apt_type = type(apt).__name__
-        if apt_type == "Apt" or "GardenApt":
+        if apt_type == "Apt" or apt_type == "GardenApt":
             continue  # they have no view or pool
 
         if apt.get_has_view() and apt.get_price() > MILLION:

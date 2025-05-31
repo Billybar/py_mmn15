@@ -17,7 +17,11 @@ class GardenApt(SpecialApt):
     def __eq__(self, other):
         if not isinstance(other, GardenApt):
             return NotImplemented
-        return super().__eq__(other) and self._garden_area == other._garden_area
+
+        return (self._floor == other._floor and
+                self._area == other._area and
+                self._has_view == other._has_view and
+                self._garden_area == other._garden_area)
 
     # 5)
     def __str__(self):

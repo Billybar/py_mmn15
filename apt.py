@@ -1,5 +1,6 @@
 PRICE_PER_SQR_METER = 20000
 ADDITIONAL_PRICE_PER_FLOOR = 5000
+FIRST_FLOOR = 1
 
 # 1)
 class Apt:
@@ -19,7 +20,12 @@ class Apt:
     def __eq__(self, other):
         if not isinstance(other, Apt):
             return NotImplemented
-        return self._floor == other._floor and self._area == other._area
+
+        if type(other) is Apt:
+            return self._floor == other._floor and self._area == other._area
+
+        # it's a subclass, let subclass handle the comparison
+        return NotImplemented
 
     # 5)
     def __str__(self):
@@ -30,7 +36,8 @@ class Apt:
         area_price = self._area * PRICE_PER_SQR_METER
         floor_price = self._floor * ADDITIONAL_PRICE_PER_FLOOR
 
-        if self._floor == 1:
+        # No additional payment for apartments on first floor
+        if self._floor <= FIRST_FLOOR:
             floor_price = 0
 
         return area_price + floor_price
