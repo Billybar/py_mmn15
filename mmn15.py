@@ -8,6 +8,9 @@ functions for calculating averages, counting specific apartment types,
 and filtering apartments based on various criteria.
 """
 
+__author__ = "Bar-chaim Aminadav"
+__student_id__ = "305413247"
+
 from apt import Apt
 from special_apt import SpecialApt
 from garden_apt import GardenApt

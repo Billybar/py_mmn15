@@ -6,6 +6,9 @@ This module defines the base Apt class that represents a basic apartment
 with floor and area attributes, and provides price calculation functionality.
 """
 
+__author__ = "Bar-chaim Aminadav"
+__student_id__ = "305413247"
+
 PRICE_PER_SQR_METER = 20000
 ADDITIONAL_PRICE_PER_FLOOR = 5000
 FIRST_FLOOR = 1

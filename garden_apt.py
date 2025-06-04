@@ -1,6 +1,3 @@
-
-
-
 """
 Garden apartment module for the apartment management system.
 
@@ -8,6 +5,9 @@ This module defines the GardenApt class that represents apartments with gardens.
 Garden apartments are always located on the ground floor and have no view,
 but include a garden area attribute.
 """
+
+__author__ = "Bar-chaim Aminadav"
+__student_id__ = "305413247"
 
 from special_apt import SpecialApt
 
