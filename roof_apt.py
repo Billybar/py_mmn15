@@ -7,8 +7,7 @@ Roof apartments always have a view and may include a pool, with additional
 pricing for both roof location and pool features.
 """
 
-__author__ = "Bar-chaim Aminadav"
-__student_id__ = "305413247"
+__author__ = "Bar-chaim Billy"
 
 from special_apt import SpecialApt
 
