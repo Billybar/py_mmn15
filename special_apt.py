@@ -5,8 +5,7 @@ This module defines the SpecialApt class that extends the basic Apt class
 with an additional view feature that affects the apartment pricing.
 """
 
-__author__ = "Bar-chaim Aminadav"
-__student_id__ = "305413247"
+__author__ = "Bar-chaim Billy"
 
 from apt import Apt
 ADDITIONAL_VIEW_FEE_PER_FLOOR = 600
