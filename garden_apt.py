@@ -7,7 +7,6 @@ but include a garden area attribute.
 """
 
 __author__ = "Bar-chaim Aminadav"
-__student_id__ = "305413247"
 
 from special_apt import SpecialApt
 
